@@ -144,7 +144,7 @@
 				<form class="blink-mailer">
 					<input type="hidden" name="title" value="Обратная связь">
 					<input type="text" placeholder="Имя" name="Имя" id="name">
-					<input type="text" placeholder="Номер" name="Номер телефона" id="phoneNumber">
+					<input type="tel" placeholder="Номер" name="Номер телефона" id="phoneNumber">
 					<textarea name="Сообщение" id="msg" placeholder="Опишите, что Вас интересует"></textarea>
 					<input type="submit" value="Отправить">
 				</form>

@@ -31,6 +31,13 @@
 <script src="<?php bloginfo('template_directory')?>/public/js/components/slideshow.min.js"></script>
 <script src="<?php bloginfo('template_directory')?>/public/js/components/slider.min.js"></script>
 <script src="<?php bloginfo('template_directory')?>/public/js/components/lightbox.min.js"></script>
+<script src="<?php bloginfo('template_directory')?>/public/js/vanilla-masker.min.js"></script>
+
+<script>
+	var el = document.querySelector('input[type="tel"]');
+	console.log();
+		VMasker(el).maskPattern("+9(999) 999-99-99"); // masking the input
+</script>
 
 <!--Unitegallery-->
 <script src="https://bsh.su/resources/callback/js/mailer.js" ></script>
@@ -67,6 +74,9 @@
 	});
 
 </script>
+
+<script src="https://bsh.su/client/script/GET/"></script>
+
 <?=get_field('google',4);?>
 <?=get_field('yandex',4);?>
 <?php wp_footer(); ?>
