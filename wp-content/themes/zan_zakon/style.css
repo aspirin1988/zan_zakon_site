@@ -46,6 +46,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+/*
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -257,9 +258,9 @@ th {
 	padding: 0;
 }
 
-/*--------------------------------------------------------------
+!*--------------------------------------------------------------
 # Typography
---------------------------------------------------------------*/
+--------------------------------------------------------------*!
 body,
 button,
 input,
@@ -337,21 +338,21 @@ big {
 	font-size: 125%;
 }
 
-/*--------------------------------------------------------------
+!*--------------------------------------------------------------
 # Elements
---------------------------------------------------------------*/
+--------------------------------------------------------------*!
 html {
 	box-sizing: border-box;
 }
 
 *,
 *:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*:after { !* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ *!
 	box-sizing: inherit;
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	background: #fff; !* Fallback for when there is no custom background color defined. *!
 }
 
 blockquote:before,
@@ -401,8 +402,8 @@ dd {
 }
 
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+	height: auto; !* Make sure images are scaled correctly. *!
+	max-width: 100%; !* Adhere to container width. *!
 }
 
 table {
@@ -410,9 +411,9 @@ table {
 	width: 100%;
 }
 
-/*--------------------------------------------------------------
+!*--------------------------------------------------------------
 # Forms
---------------------------------------------------------------*/
+--------------------------------------------------------------*!
 button,
 input[type="button"],
 input[type="reset"],
@@ -499,12 +500,12 @@ textarea {
 	width: 100%;
 }
 
-/*--------------------------------------------------------------
+!*--------------------------------------------------------------
 # Navigation
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
+--------------------------------------------------------------*!
+!*--------------------------------------------------------------
 ## Links
---------------------------------------------------------------*/
+--------------------------------------------------------------*!
 a {
 	color: royalblue;
 }
@@ -528,9 +529,9 @@ a:active {
 	outline: 0;
 }
 
-/*--------------------------------------------------------------
+!*--------------------------------------------------------------
 ## Menus
---------------------------------------------------------------*/
+--------------------------------------------------------------*!
 .main-navigation {
 	clear: both;
 	display: block;
@@ -605,7 +606,7 @@ a:active {
 .main-navigation .current-menu-ancestor > a {
 }
 
-/* Small menu. */
+!* Small menu. *!
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
@@ -642,10 +643,10 @@ a:active {
 	width: 50%;
 }
 
-/*--------------------------------------------------------------
+!*--------------------------------------------------------------
 # Accessibility
---------------------------------------------------------------*/
-/* Text meant only for screen readers. */
+--------------------------------------------------------------*!
+!* Text meant only for screen readers. *!
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
@@ -671,17 +672,17 @@ a:active {
 	text-decoration: none;
 	top: 5px;
 	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
+	z-index: 100000; !* Above WP toolbar. *!
 }
 
-/* Do not show the outline on the skip link target. */
+!* Do not show the outline on the skip link target. *!
 #content[tabindex="-1"]:focus {
 	outline: 0;
 }
 
-/*--------------------------------------------------------------
+!*--------------------------------------------------------------
 # Alignments
---------------------------------------------------------------*/
+--------------------------------------------------------------*!
 .alignleft {
 	display: inline;
 	float: left;
@@ -701,9 +702,9 @@ a:active {
 	margin-right: auto;
 }
 
-/*--------------------------------------------------------------
+!*--------------------------------------------------------------
 # Clearings
---------------------------------------------------------------*/
+--------------------------------------------------------------*!
 .clear:before,
 .clear:after,
 .entry-content:before,
@@ -730,24 +731,24 @@ a:active {
 	clear: both;
 }
 
-/*--------------------------------------------------------------
+!*--------------------------------------------------------------
 # Widgets
---------------------------------------------------------------*/
+--------------------------------------------------------------*!
 .widget {
 	margin: 0 0 1.5em;
 }
 
-/* Make sure select elements fit in widgets. */
+!* Make sure select elements fit in widgets. *!
 .widget select {
 	max-width: 100%;
 }
 
-/*--------------------------------------------------------------
+!*--------------------------------------------------------------
 # Content
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
+--------------------------------------------------------------*!
+!*--------------------------------------------------------------
 ## Posts and pages
---------------------------------------------------------------*/
+--------------------------------------------------------------*!
 .sticky {
 	display: block;
 }
@@ -777,9 +778,9 @@ a:active {
 	margin: 0 0 1.5em;
 }
 
-/*--------------------------------------------------------------
+!*--------------------------------------------------------------
 ## Comments
---------------------------------------------------------------*/
+--------------------------------------------------------------*!
 .comment-content a {
 	word-wrap: break-word;
 }
@@ -788,23 +789,23 @@ a:active {
 	display: block;
 }
 
-/*--------------------------------------------------------------
+!*--------------------------------------------------------------
 # Infinite scroll
---------------------------------------------------------------*/
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+--------------------------------------------------------------*!
+!* Globally hidden elements when Infinite Scroll is supported and in use. *!
+.infinite-scroll .posts-navigation, !* Older / Newer Posts Navigation (always hidden) *!
+.infinite-scroll.neverending .site-footer { !* Theme Footer (when set to scrolling) *!
 	display: none;
 }
 
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+!* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. *!
 .infinity-end.neverending .site-footer {
 	display: block;
 }
 
-/*--------------------------------------------------------------
+!*--------------------------------------------------------------
 # Media
---------------------------------------------------------------*/
+--------------------------------------------------------------*!
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
@@ -814,16 +815,16 @@ a:active {
 	padding: 0;
 }
 
-/* Make sure embeds and iframes fit their containers. */
+!* Make sure embeds and iframes fit their containers. *!
 embed,
 iframe,
 object {
 	max-width: 100%;
 }
 
-/*--------------------------------------------------------------
+!*--------------------------------------------------------------
 ## Captions
---------------------------------------------------------------*/
+--------------------------------------------------------------*!
 .wp-caption {
 	margin-bottom: 1.5em;
 	max-width: 100%;
@@ -843,9 +844,9 @@ object {
 	text-align: center;
 }
 
-/*--------------------------------------------------------------
+!*--------------------------------------------------------------
 ## Galleries
---------------------------------------------------------------*/
+--------------------------------------------------------------*!
 .gallery {
 	margin-bottom: 1.5em;
 }
@@ -892,3 +893,4 @@ object {
 .gallery-caption {
 	display: block;
 }
+*/

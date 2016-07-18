@@ -25,6 +25,13 @@ body {
   line-height: 1.2;
 }
 
+.success-mail-text{
+  color: white;
+}
+.uk-pagination>li.uk-active>a{
+  background: #000000;
+  color: white;
+}
 a {
   color: inherit;
   text-decoration: none;

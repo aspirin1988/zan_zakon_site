@@ -34,11 +34,12 @@
 				<span><a href="mailto:<?=get_field('email',4)?>"><?=get_field('email',4)?></a></span>
 			</div>
 
-			<nav class="uk-navbar">
-				<ul class="uk-navbar-nav uk-hidden-small">
+			<nav class="uk-navbar"
+				 data-uk-sticky="{getWidthFrom:'.main-section', top:-200, animation: 'uk-animation-slide-top'}">
+				<ul class="uk-navbar-nav uk-hidden-small" data-uk-scrollspy-nav="{closest:'li', topoffset:-200}">
 					<?php $menu=wp_get_nav_menu_items('main');
 					foreach ($menu as $key=>$value):?>
-						<li><a href="<?=get_permalink(4)?><?=$value->url?>" ><?=$value->title?></a></li>
+					<li><a href="<?=$value->url?>" <?php if ($key) {echo 'data-uk-smooth-scroll="{offset: 40}"';} else {echo 'data-uk-smooth-scroll';}?>><?=$value->title?></a></li>
 					<?php endforeach; ?>
 				</ul>
 				<a href="#my-id" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
@@ -46,9 +47,9 @@
 
 			<div id="my-id" class="uk-offcanvas">
 				<div class="uk-offcanvas-bar">
-					<ul class="uk-nav uk-nav-offcanvas">
+					<ul class="uk-nav uk-nav-offcanvas" data-uk-scrollspy-nav="{closest:'li', topoffset:-200}">
 						<?php foreach ($menu as $key=>$value):?>
-						<li><a href="<?=get_permalink(4)?><?=$value->url?>" ><?=$value->title?></a></li>
+						<li><a href="<?=$value->url?>" <?php if ($key) {echo 'data-uk-smooth-scroll="{offset: 40}"';} else {echo 'data-uk-smooth-scroll';}?>><?=$value->title?></a></li>
 						<?php endforeach; ?>
 					</ul>
 				</div>

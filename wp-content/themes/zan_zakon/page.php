@@ -12,7 +12,13 @@
  * @package art_dani
  */
 
-get_header(); ?>
+if (is_front_page()) {
+	get_header('main');
+}
+else {
+	get_header();
+}
+ ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
