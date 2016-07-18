@@ -135,7 +135,6 @@ function get_the_thumbnail_tag_by_id($id=false)
 function pp_gallery_upload() {
     global $wp_query;
     $postid = $wp_query->post->ID;
-//    echo $postid;
     $pp_upload_data['images'] = $_FILES['files'];
     $pp_upload_data['id'] = $_GET['postID'];
 
@@ -163,7 +162,7 @@ function pp_gallery_upload() {
                         $fileUrl = "/wp-content/uploads/pp_gallery/" . $pp_upload_data['id'] . '/' . $name;
                         $name=explode('.',$name);
                         $name=$name[0];
-                        $query = "INSERT INTO pp_gallery_data (url, pp_id,name,alt) VALUES ('$fileUrl','{$pp_upload_data['id']}','{$name}','{$name}')";
+                        $query = "INSERT INTO ".TABLE_PREFIX."pp_gallery_data (url, pp_id,name,alt) VALUES ('$fileUrl','{$pp_upload_data['id']}','{$name}','{$name}')";
                         $wpdb->query($query);
 
                     } else {
@@ -177,9 +176,8 @@ function pp_gallery_upload() {
 
 function pp_gallery_activation() {
     global $wpdb;
-
     $charset_collate = $wpdb->get_charset_collate();
-    $table_name = 'pp_gallery_data';
+    $table_name = TABLE_PREFIX.'pp_gallery_data';
     $sql = "CREATE TABLE $table_name (
         id int(9) NOT NULL AUTO_INCREMENT,
         url varchar(255) DEFAULT '' NOT NULL,
@@ -196,18 +194,18 @@ function pp_gallery_activation() {
 function pp_gallery_get($id=false,$all_post=false,$order='pp_id') {
     global $wpdb;
     if ($id){
-        $pp_gallery_get_query = "SELECT * FROM pp_gallery_data WHERE pp_id = '{$id}' ORDER BY {$order}";
+        $pp_gallery_get_query = "SELECT * FROM ".TABLE_PREFIX."pp_gallery_data WHERE pp_id = '{$id}' ORDER BY {$order}";
     }
     else
     {
         global $post;
         if ($all_post) {
-            $pp_gallery_get_query = "SELECT * FROM pp_gallery_data ORDER BY {$order}";
+            $pp_gallery_get_query = "SELECT * FROM ".TABLE_PREFIX."pp_gallery_data ORDER BY {$order}";
         }
         else {
             global $post;
             $id=$post->ID;
-            $pp_gallery_get_query = "SELECT * FROM pp_gallery_data WHERE pp_id = '{$id}' ORDER BY {$order}";
+            $pp_gallery_get_query = "SELECT * FROM ".TABLE_PREFIX."pp_gallery_data WHERE pp_id = '{$id}' ORDER BY {$order}";
         }
     }
 
@@ -218,7 +216,7 @@ function pp_gallery_remove_all($id)
 {
     global $wpdb;
     $response = 0;
-    $pp_gallery_get_query = "SELECT * FROM pp_gallery_data WHERE pp_id = '{$id}'";
+    $pp_gallery_get_query = "SELECT * FROM ".TABLE_PREFIX."pp_gallery_data WHERE pp_id = '{$id}'";
     if ($res2 = $wpdb->get_results($pp_gallery_get_query)) {
         $response = 1;
     };
@@ -230,7 +228,7 @@ function pp_gallery_remove_all($id)
             unlink($path);
         }
     endforeach;
-    $pp_gallery_get_query = "DELETE FROM pp_gallery_data WHERE pp_id = '{$id}' ";
+    $pp_gallery_get_query = "DELETE FROM ".TABLE_PREFIX."pp_gallery_data WHERE pp_id = '{$id}' ";
     $wpdb->query($pp_gallery_get_query);
     return json_encode($response);
 }
@@ -238,14 +236,14 @@ function pp_gallery_remove_all($id)
 function pp_gallery_remove($id) {
     global $wpdb;
     $response=0;
-    $pp_gallery_get_query = "SELECT * FROM pp_gallery_data WHERE id = '{$id}'";
+    $pp_gallery_get_query = "SELECT * FROM ".TABLE_PREFIX."pp_gallery_data WHERE id = '{$id}'";
     if ($res2=$wpdb->get_results($pp_gallery_get_query))
     {
         $response=1;
     };
     $res1=$res2[0];
 
-    $pp_gallery_get_query = "SELECT * FROM pp_gallery_data WHERE url = '{$res1->url}'";
+    $pp_gallery_get_query = "SELECT * FROM ".TABLE_PREFIX."pp_gallery_data WHERE url = '{$res1->url}'";
     $res2=$wpdb->get_results($pp_gallery_get_query);
     if (count($res2)<=1):
     $path=ABSPATH.$res1->url;
@@ -254,7 +252,7 @@ function pp_gallery_remove($id) {
     }
     endif;
 
-    $pp_gallery_get_query = "DELETE FROM pp_gallery_data WHERE id = '{$id}' ";
+    $pp_gallery_get_query = "DELETE FROM ".TABLE_PREFIX."pp_gallery_data WHERE id = '{$id}' ";
     $wpdb->query($pp_gallery_get_query);
     return json_encode($response);
 }
@@ -263,7 +261,7 @@ function pp_gallery_edit($id) {
 
     global $wpdb;
     $pp_data=$_POST['pp'];
-    $pp_gallery_get_query = "UPDATE pp_gallery_data set name='{$pp_data['name']}',alt='{$pp_data['alt']}',description='{$pp_data['description']}' WHERE id = '{$id}'";
+    $pp_gallery_get_query = "UPDATE ".TABLE_PREFIX."pp_gallery_data set name='{$pp_data['name']}',alt='{$pp_data['alt']}',description='{$pp_data['description']}' WHERE id = '{$id}'";
     //file_put_contents('text.txt',$pp_gallery_get_query);
     $res=$wpdb->query($pp_gallery_get_query);
     return json_encode($res);

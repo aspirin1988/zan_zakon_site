@@ -1,0 +1,537 @@
+/* НАЧАЛО ОБЩИЕ СТИЛИ */
+
+//НАЧАЛО объявляем переменные SASS
+$decor-font: "Rosa Marena", fantasy;
+$main-color-light: #ff001b; //red
+$main-color-dark: #00a8c7; //blue
+//КОНЕЦ объявляем переменные SASS
+
+/* НАЧАЛО подключаем шрифт 'Bebas Neue': */
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../fonts/bebas_neue/BebasNeue Regular.otf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../fonts/bebas_neue/BebasNeue Bold.otf') format('truetype');
+  font-weight: bold;
+}
+/* КОНЕЦ подключаем шрифт 'Bebas Neue' */
+
+/* НАЧАЛО общие стили */
+body {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover,
+  &:focus,
+  &:active {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 25px;
+  text-transform: uppercase;
+  @media screen and (min-width: 768px){
+    font-size: 28px;
+  }
+}
+
+.text-dark {
+  color: $main-color-dark;
+}
+.text-light {
+  color: $main-color-light;
+}
+
+.more-btn {
+  text-transform: uppercase;
+  background: black;
+  color: white;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  float: none;
+  @media screen and (min-width: 768px){
+    float: right;
+  }
+  &:hover {
+    color: white;
+    background: #333333;
+  }
+}
+
+.uk-overlay-background { //overlay, например в Акциях
+  background-color: rgba(255,255,255,.7);
+}
+
+.uk-pagination {
+  margin-top: 0;
+  margin-bottom: 25px;
+  &>.uk-active>span {
+    background: $main-color-light;
+  }
+}
+
+/* НАЧАЛО header */
+header {
+  position: relative;
+  z-index: 10;
+  font-size: 18px;
+
+  .header__logo {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    @media (min-width: 480px) {
+      max-width: 330px;
+    }
+
+    @media (min-width: 1220px) {
+      float: left;
+    }
+
+    img {
+      display: inline-block;
+    }
+  }
+
+  .navbar-and-contacts-col {
+
+    @media (min-width: 1220px) {
+      float: right;
+      padding-top: 15px;
+    }
+    .contacts {
+      text-align: center;
+      color: #ff001b;
+
+      @media (min-width: 1220px) {
+        text-align: right;
+      }
+
+      a {
+        padding: 0 15px;
+      }
+
+      span + span {
+        display: block;
+        margin-top: 10px;
+        @media (min-width: 480px) {
+          margin-top: 0;
+          display: inline-block;
+        }
+
+        &::before {
+          @media (min-width: 960px) {
+            content: "|";
+          }
+        }
+      }
+    }
+
+    .uk-navbar {
+      background: transparent;
+
+      .uk-navbar-nav {
+        float: none;
+        text-align: center;
+        @media screen and (min-width: 1220px) {
+          text-align: right;
+        }
+        &>li {
+          float: none;
+          display: inline-block;
+          text-align: left;
+          &>a {
+            text-transform: uppercase;
+            padding: 0 5px;
+            background: transparent;
+            font-size: 16px;
+            border-radius: 3px;
+            color: #00a8c7;
+            display: inline-block;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        &>li + li::before {
+          color: #00a8c7;
+          content: "|";
+        }
+        &>li.uk-active > a {
+          text-decoration: underline;
+        }
+      }
+
+      &.uk-active {
+        background: rgb(255,255,255);
+        border-bottom: 2px $main-color-dark solid;
+        left: 0;
+        right: 0;
+        .uk-navbar-nav {
+          text-align: center;
+        }
+        .uk-navbar-nav li > a,
+        .uk-navbar-nav li.uk-open > a {
+          color: black;
+          text-shadow: none;
+          text-decoration: none;
+          &:hover {
+            border-radius: 0;
+          }
+        }
+        .uk-navbar-nav>li + li::before {
+          content: none;
+        }
+        .uk-navbar-nav li.uk-active > a {
+          border-radius: 0;
+          background: $main-color-dark;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .uk-offcanvas {
+    .uk-nav-sub {
+      background: rgba(255,255,255,.2);
+      li a {
+        padding: 5px 0;
+      }
+    }
+  }
+}
+/* КОНЕЦ header */
+
+/* НАЧАЛО footer */
+footer {
+  background: 50% 50%/cover url("../img/background_red_furniture.jpg");
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+  @media screen and (min-width: 960px){
+    background: 50% 50%/cover url("../img/footer_background.jpg");
+  }
+  @media screen and (max-width: 768px){
+    [class*=uk-width] + [class*=uk-width] {
+      margin-top: 25px;
+    }
+  }
+
+  .company_name_row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    @media screen and (min-width: 960px){
+      font-size: 20px;
+    }
+    p {
+      margin: 0;
+      color: $main-color-dark;
+      text-transform: uppercase;
+    }
+    p.company_name {
+      color: $main-color-light;
+      font-size: 32px;
+    }
+    p:first-child {
+      text-align: left;
+    }
+    p:last-child {
+      text-align: right;
+    }
+  }
+
+  h3 {
+    color: white;
+  }
+}
+/* КОНЕЦ footer */
+
+/* НАЧАЛО main-section */
+.main-section {
+  .uk-slidenav-position {
+    @media (min-height: 500px) and (min-width: 960px) {
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .uk-overlay-panel {
+      position: relative;
+      .overlay-content {
+        color: $main-color-dark;
+        font-family: "Bebas Neue", Arial,sans-serif;
+        text-align: center;
+        font-size: 36px;
+        padding: 20px;
+        background: rgba(255,255,255,.7);
+
+        @media (min-width: 960px) {
+          position: absolute;
+          width: 450px;
+          right: 50%;
+          margin-right: -225px;
+          bottom: 400px;
+        }
+        p.company_name {
+          font-family: Arial, sans-serif;
+          color: $main-color-light;
+          font-size: 48px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+}
+/* КОНЕЦ main-section */
+
+/* НАЧАЛО about */
+.about {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 18px;
+  text-align: justify;
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 768px){
+    text-align: left;
+  }
+  h2 {
+    font-weight: bold;
+    margin-top: 25px;
+    @media screen and (min-width: 768px){
+      margin-top: 0;
+    }
+  }
+}
+/* КОНЕЦ about */
+
+/* НАЧАЛО services */
+.services {
+  background: 50% 50%/cover url("../img/background_red_furniture.jpg");
+  padding: 25px 0;
+  color: white;
+
+  h2 {
+    color: white;
+  }
+
+  .uk-grid {
+    padding-top: 25px;
+    & > li {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 30px;
+        max-width: 100px;
+        @media screen and (min-width: 768px){
+          max-width: none;
+        }
+      }
+
+      h4 {
+        color: white;
+        font-size: 18px;
+      }
+    }
+  }
+}
+/* КОНЕЦ services */
+
+/* НАЧАЛО partners */
+.partners {
+  .content-container {
+    @media screen and (min-width: 768px) {
+      border: 2px solid #d6b883;
+    }
+  }
+  .profile-container {
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      padding-left: 0;
+    }
+  }
+  .text-container {
+    padding: 15px;
+  }
+  .nav-container {
+    display: flex;
+    align-items: stretch;
+  }
+  .uk-nav {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    &>li {
+      flex: 1;
+      display: flex;
+      &>a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        color: black;
+        border: 2px #d6b883 solid;
+        border-top: none;
+        margin: 0;
+      }
+    }
+    &>li:first-child a {
+      border-top: 2px #d6b883 solid;
+    }
+    &>li.uk-active a {
+      background: url("../img/partners_background.jpg");
+    }
+  }
+  .contacts_and_map {
+    background: url("../img/partners_background.jpg");
+    margin-top: 0;
+  }
+}
+/* КОНЕЦ partners */
+
+/* НАЧАЛО feedback */
+.feedback {
+  margin: 35px 0 0;
+  background: 50% 50%/cover url("../img/background_red_furniture.jpg");
+  padding: 35px 0;
+  @media screen and (min-width: 960px){
+    background: 50% 50%/cover url("../img/feedback_background.jpg");
+  }
+
+  form {
+    max-width: 330px;
+    margin: 0 auto;
+    input,
+    textarea {
+      box-sizing: border-box;
+      background: transparent;
+      border: 1px solid white;
+      padding: 7px 15px;
+      color: white;
+      width: 100%;
+    }
+    input:not([type=submit]) {
+      margin-bottom: 20px;
+    }
+    input[type=submit] {
+      padding: 10px 20px;
+      float: right;
+      width: auto;
+    }
+    textarea {
+      margin-bottom: 20px;
+      min-height: 180px;
+      resize: none;
+    }
+  }
+
+  .text-section {
+    color: white;
+    h2 {
+      color: white;
+    }
+    font-size: 24px;
+  }
+}
+/* КОНЕЦ feedback */
+
+/* НАЧАЛО reviews */
+.reviews {
+  padding: 20px 0;
+  text-align: center;
+  h2 {
+    margin-bottom: 25px;
+  }
+  h3 {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+  }
+  @media (min-width: 960px) {
+    .data-uk-slider {
+      position: relative;
+      padding: 0 75px;
+      & > .uk-slidenav {
+        top: 10%;
+        display: block;
+        position: absolute;
+        &::before {
+          content: "";
+        }
+        img {
+          height: auto;
+          width: auto;
+        }
+        &.uk-slidenav-previous {
+          left: 0;
+        }
+        &.uk-slidenav-next {
+          right: 0;
+        }
+
+      }
+    }
+  }
+  @media (max-width: 960px) {
+    .data-uk-slider > .uk-slidenav img {
+      display: none;
+    }
+  }
+}
+/* КОНЕЦ reviews */
+
+/* НАЧАЛО publications */
+.publications {
+  padding: 25px 0;
+  h2 {
+    text-align: center;
+  }
+  h3 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+  article.uk-grid {
+    margin: 15px 0;
+    @media screen and (min-width: 768px){
+      margin: 50px 0 30px;
+    }
+  }
+  .text-section {
+    margin: 25px 0;
+  }
+  .more-btn.all {
+    float: none;
+    margin: 0 auto;
+  }
+}
+/* КОНЕЦ publications */
+
+
+/******************************
+НАЧАЛО Страница Единичный товар
+*******************************/
+
+
+/******************************
+КОНЕЦ Страница Единичный товар
+*******************************/
