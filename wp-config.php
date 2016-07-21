@@ -20,17 +20,16 @@
 
 // ** Параметры MySQL: Эту информацию можно получить у вашего хостинг-провайдера ** //
 /** Имя базы данных для WordPress */
-define('DB_NAME', 'zan_zakon');
+define('DB_NAME', 'zanzakon_database');
 
 /** Имя пользователя MySQL */
-define('DB_USER', 'root');
+define('DB_USER', 'zanza_user');
 
 /** Пароль к базе данных MySQL */
-define('DB_PASSWORD', 'root');
-//Zakon_amd
-//АлавАУлшщрувкЕцоу№"№"№?,
+define('DB_PASSWORD', 'Xfwg54$1');
+
 /** Имя сервера MySQL */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'srv-pleskdb15.ps.kz:3306');
 
 /** Кодировка базы данных для создания таблиц. */
 define('DB_CHARSET', 'utf8');
