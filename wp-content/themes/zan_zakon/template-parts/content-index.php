@@ -78,6 +78,7 @@
 					?>
 					<li>
 						<div class="uk-grid">
+						<div class="uk-grid uk-width-medium-1-1">
 							<div class="uk-width-medium-2-10 profile-container">
 								<img src="<?=get_the_post_thumbnail_url()?>">
 							</div>
@@ -86,7 +87,7 @@
 								<?php the_content('')?>
 							</div>
 						</div>
-						<div class="uk-grid contacts_and_map">
+						<div class="uk-grid uk-width-medium-1-1 contacts_and_map">
 							<div class="uk-width-medium-3-10 text-container uk-text-center">
 								<?php if (get_field('phone1')): ?>
 								<a href="tel:<?=get_field('phone1')?>"><?=get_field('phone1')?></a> <br>
@@ -112,9 +113,10 @@
 									<?php endif; ?>
 								</p>
 							</div>
-							<div class="uk-width-medium-7-10">
+							<div class="uk-width-small-1-1 uk-width-medium-7-10 partners-map">
 								<?=get_field('map')?>
 							</div>
+						</div>
 						</div>
 					</li>
 					<?php endforeach; ?>
