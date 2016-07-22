@@ -13,7 +13,8 @@
 /* НАЧАЛО общие стили */
 body {
   font-size: 16px;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin-top: -79px; }
 
 .success-mail-text {
   color: white; }
@@ -74,8 +75,10 @@ h2 {
 /* НАЧАЛО header */
 header {
   position: relative;
+  bottom: -79px;
   z-index: 10;
-  font-size: 18px; }
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.8); }
   header .header__logo {
     margin: 0 auto;
     display: flex;
@@ -212,14 +215,19 @@ footer {
     text-align: center;
     font-size: 36px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.7); }
+    background: rgba(255, 255, 255, 0); }
     @media (min-width: 960px) {
       .main-section .uk-slidenav-position .uk-overlay-panel .overlay-content {
         position: absolute;
         width: 450px;
         right: 50%;
         margin-right: -225px;
-        bottom: 400px; } }
+        bottom: 350px; } }
+    .main-section .uk-slidenav-position .uk-overlay-panel .overlay-content p {
+      background: rgba(200, 20, 15, 0.5);
+      padding: 5px 10px;
+      display: inline-block;
+      margin: 0; }
     .main-section .uk-slidenav-position .uk-overlay-panel .overlay-content p.company_name {
       font-family: Arial, sans-serif;
       color: #ff001b;

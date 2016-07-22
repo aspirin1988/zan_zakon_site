@@ -5,7 +5,7 @@
 			<?php foreach (pp_gallery_get() as $image): ?>
 			<li>
 				<img src="<?=$image->url?>">
-				<div class="uk-overlay-panel uk-overlay-slide-right">
+				<div class="uk-overlay-panel">
 					<div class="overlay-content">
 						<?=$image->description?>
 					</div>
@@ -29,7 +29,7 @@
 		<div class="uk-width-medium-6-10">
 			<h2><?=get_the_title()?></h2>
 			<?=get_the_content('')?>
-			<a href="<?=get_permalink()?>" class="more-btn">Подробнее</a>
+			<!--a href="< ?=get_permalink()?>" class="more-btn">Подробнее</a-->
 		</div>
 	</div>
 </div>

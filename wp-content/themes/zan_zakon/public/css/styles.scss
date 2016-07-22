@@ -23,6 +23,7 @@ $main-color-dark: #00a8c7; //blue
 body {
   font-size: 16px;
   line-height: 1.2;
+  margin-top: -79px;
 }
 
 .success-mail-text{
@@ -96,8 +97,10 @@ h2 {
 /* НАЧАЛО header */
 header {
   position: relative;
+  bottom: -79px;
   z-index: 10;
   font-size: 18px;
+  background: rgba(255,255,255,.8);
 
   .header__logo {
     margin: 0 auto;
@@ -272,6 +275,9 @@ footer {
 /* КОНЕЦ footer */
 
 /* НАЧАЛО main-section */
+main {
+}
+
 .main-section {
   .uk-slidenav-position {
     @media (min-height: 500px) and (min-width: 960px) {
@@ -287,14 +293,20 @@ footer {
         text-align: center;
         font-size: 36px;
         padding: 20px;
-        background: rgba(255,255,255,.7);
+        background: rgba(255,255,255,.0);
 
         @media (min-width: 960px) {
           position: absolute;
           width: 450px;
           right: 50%;
           margin-right: -225px;
-          bottom: 400px;
+          bottom: 350px;
+        }
+        p {
+          background: rgba(200, 20, 15, 0.5);
+          padding: 5px 10px;
+          display: inline-block;
+          margin: 0;
         }
         p.company_name {
           font-family: Arial, sans-serif;
