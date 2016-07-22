@@ -251,10 +251,10 @@ footer {
   }
 
   .company_name_row {
-    display: flex;
-    justify-content: space-between;
     font-size: 18px;
     @media screen and (min-width: 960px){
+      display: flex;
+      justify-content: space-between;
       font-size: 20px;
     }
     p {
@@ -335,6 +335,7 @@ main {
 
 /* НАЧАЛО about */
 .about {
+  background: rgba(50, 80, 82, 0.08);
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 18px;
