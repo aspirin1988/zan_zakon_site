@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_directory')?>/public/css/components/slideshow.min.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory')?>/public/css/components/slider.min.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory')?>/public/css/components/slidenav.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 
 	<!--Unitegallery-->
 	<link rel='stylesheet' href='<?php bloginfo('template_directory')?>/public/css/unite-gallery.css' type='text/css'>

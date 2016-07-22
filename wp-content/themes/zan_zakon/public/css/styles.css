@@ -207,6 +207,8 @@ footer {
   .main-section .uk-slidenav-position {
     height: 100vh;
     overflow: hidden; } }
+.main-section .uk-slidenav-position .uk-slidenav {
+  background: rgba(0, 0, 0, 0.2); }
 .main-section .uk-slidenav-position .uk-overlay-panel {
   position: relative; }
   .main-section .uk-slidenav-position .uk-overlay-panel .overlay-content {
@@ -224,10 +226,11 @@ footer {
         margin-right: -225px;
         bottom: 350px; } }
     .main-section .uk-slidenav-position .uk-overlay-panel .overlay-content p {
-      background: rgba(200, 20, 15, 0.5);
-      padding: 5px 10px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 10px 10px 5px;
       display: inline-block;
-      margin: 0; }
+      margin: 0;
+      font-family: 'Comfortaa', cursive; }
     .main-section .uk-slidenav-position .uk-overlay-panel .overlay-content p.company_name {
       font-family: Arial, sans-serif;
       color: #ff001b;
