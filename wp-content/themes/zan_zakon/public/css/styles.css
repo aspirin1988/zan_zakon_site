@@ -221,9 +221,9 @@ footer {
     @media (min-width: 960px) {
       .main-section .uk-slidenav-position .uk-overlay-panel .overlay-content {
         position: absolute;
-        width: 450px;
+        max-width: 600px;
         right: 50%;
-        margin-right: -225px;
+        margin-right: -300px;
         bottom: 350px; } }
     .main-section .uk-slidenav-position .uk-overlay-panel .overlay-content p {
       background: rgba(255, 255, 255, 0.7);
