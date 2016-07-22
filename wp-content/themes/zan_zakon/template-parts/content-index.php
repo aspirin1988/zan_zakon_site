@@ -47,8 +47,8 @@
 			<li>
 				<img src="<?=get_the_post_thumbnail_url()?>">
 				<div>
-					<h4><a href="<?=get_permalink()?>"><?=get_the_title()?></a></h4>
-					<?=get_the_content()?>
+					<h4><?=get_the_title()?></h4>
+					<?php the_content('')?>
 				</div>
 			</li>
 			<?php endforeach; wp_reset_query(); ?>
@@ -78,15 +78,16 @@
 					?>
 					<li>
 						<div class="uk-grid">
+						<div class="uk-grid uk-width-medium-1-1">
 							<div class="uk-width-medium-2-10 profile-container">
 								<img src="<?=get_the_post_thumbnail_url()?>">
 							</div>
 							<div class="uk-width-medium-8-10 text-container">
 								<h3><?=get_the_title()?></h3>
-								<?=get_the_content()?>
+								<?php the_content('')?>
 							</div>
 						</div>
-						<div class="uk-grid contacts_and_map">
+						<div class="uk-grid uk-width-medium-1-1 contacts_and_map">
 							<div class="uk-width-medium-3-10 text-container uk-text-center">
 								<?php if (get_field('phone1')): ?>
 								<a href="tel:<?=get_field('phone1')?>"><?=get_field('phone1')?></a> <br>
@@ -112,9 +113,10 @@
 									<?php endif; ?>
 								</p>
 							</div>
-							<div class="uk-width-medium-7-10">
+							<div class="uk-width-small-1-1 uk-width-medium-7-10 partners-map">
 								<?=get_field('map')?>
 							</div>
+						</div>
 						</div>
 					</li>
 					<?php endforeach; ?>
@@ -170,7 +172,7 @@
 					<li>
 						<h3><?=get_the_title()?></h3>
 						<p>
-							<?=get_the_content()?>
+							<?php the_content('')?>
 						</p>
 					</li>
 					<?php endforeach; ?>
@@ -197,7 +199,7 @@
 		<article class="uk-grid">
 			<div class="uk-width-medium-6-10 uk-push-4-10 text-section">
 				<h3><?=get_the_title()?></h3>
-				<?=get_the_content()?>
+				<?php the_content('')?>
 				<a href="<?=get_permalink()?>" class="more-btn">Подробнее</a>
 			</div>
 			<div class="uk-width-medium-4-10 uk-pull-6-10">

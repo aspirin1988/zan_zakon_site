@@ -1,7 +1,7 @@
 <article class="uk-grid">
 	<div class="uk-width-medium-6-10 uk-push-4-10 text-section">
 		<h3><?=get_the_title()?></h3>
-		<?=get_the_content()?>
+		<?php the_content('')?>
 		<a href="<?=get_permalink()?>" class="more-btn">Подробнее</a>
 	</div>
 	<div class="uk-width-medium-4-10 uk-pull-6-10">

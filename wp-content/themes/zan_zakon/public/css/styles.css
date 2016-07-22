@@ -279,6 +279,10 @@ footer {
 
 /* КОНЕЦ services */
 /* НАЧАЛО partners */
+.partners .partners-map {
+  margin: 0; }
+  .partners .partners-map ymaps {
+    height: 180px; }
 @media screen and (min-width: 768px) {
   .partners .content-container {
     border: 2px solid #d6b883; } }
@@ -313,7 +317,7 @@ footer {
     background: url("../img/partners_background.jpg"); }
 .partners .contacts_and_map {
   background: url("../img/partners_background.jpg");
-  margin-top: 0; }
+  margin: 0; }
 
 /* КОНЕЦ partners */
 /* НАЧАЛО feedback */
