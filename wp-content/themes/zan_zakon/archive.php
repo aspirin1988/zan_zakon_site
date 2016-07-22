@@ -16,7 +16,9 @@ $offset=$page_num*$page_post;
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-
+		<br>
+		<br>
+		<br>
 		<main>
 			<div class="publications" id="publications">
 				<div class="uk-container uk-container-center">

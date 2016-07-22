@@ -47,8 +47,8 @@
 			<li>
 				<img src="<?=get_the_post_thumbnail_url()?>">
 				<div>
-					<h4><a href="<?=get_permalink()?>"><?=get_the_title()?></a></h4>
-					<?=get_the_content()?>
+					<h4><?=get_the_title()?></h4>
+					<?php the_content('')?>
 				</div>
 			</li>
 			<?php endforeach; wp_reset_query(); ?>
@@ -83,7 +83,7 @@
 							</div>
 							<div class="uk-width-medium-8-10 text-container">
 								<h3><?=get_the_title()?></h3>
-								<?=get_the_content()?>
+								<?php the_content('')?>
 							</div>
 						</div>
 						<div class="uk-grid contacts_and_map">
@@ -170,7 +170,7 @@
 					<li>
 						<h3><?=get_the_title()?></h3>
 						<p>
-							<?=get_the_content()?>
+							<?php the_content('')?>
 						</p>
 					</li>
 					<?php endforeach; ?>
@@ -197,7 +197,7 @@
 		<article class="uk-grid">
 			<div class="uk-width-medium-6-10 uk-push-4-10 text-section">
 				<h3><?=get_the_title()?></h3>
-				<?=get_the_content()?>
+				<?php the_content('')?>
 				<a href="<?=get_permalink()?>" class="more-btn">Подробнее</a>
 			</div>
 			<div class="uk-width-medium-4-10 uk-pull-6-10">
