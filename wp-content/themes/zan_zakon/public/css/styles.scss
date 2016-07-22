@@ -385,9 +385,7 @@ main {
 .partners {
   .partners-map{
     margin: 0;
-    /*ymaps {
-      height: 180px;
-    }*/
+    min-height: 180px;
   }
   .content-container {
     @media screen and (min-width: 768px) {
