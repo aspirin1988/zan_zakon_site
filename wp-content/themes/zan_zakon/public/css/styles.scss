@@ -23,8 +23,11 @@ $main-color-dark: #00a8c7; //blue
 body {
   font-size: 16px;
   line-height: 1.2;
-  margin-top: -79px;
+  margin-top: 0;
   font-family: 'Play', sans-serif;
+  @media screen and (min-width: 768px){
+    margin-top: -79px;
+  }
 }
 
 .success-mail-text{
@@ -98,12 +101,15 @@ h2 {
 
 /* НАЧАЛО header */
 header {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Play', Arial, sans-serif;
   position: relative;
-  bottom: -79px;
   z-index: 10;
   font-size: 18px;
-  background: rgba(255,255,255,.8);
+  background: rgba(50, 80, 82, 0.08);
+  @media screen and (min-width: 768px){
+    background: rgba(255,255,255,.8);
+    bottom: -79px;
+  }
 
   .header__logo {
     margin: 0 auto;
@@ -172,7 +178,7 @@ header {
           display: inline-block;
           text-align: left;
           &>a {
-            font-family: 'Comfortaa', cursive;
+            font-family: 'Play', Arial, sans-serif;
             letter-spacing: 1px;
             text-transform: uppercase;
             padding: 0 5px;

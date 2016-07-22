@@ -14,8 +14,11 @@
 body {
   font-size: 16px;
   line-height: 1.2;
-  margin-top: -79px;
+  margin-top: 0;
   font-family: 'Play', sans-serif; }
+  @media screen and (min-width: 768px) {
+    body {
+      margin-top: -79px; } }
 
 .success-mail-text {
   color: white; }
@@ -76,12 +79,15 @@ h2 {
 
 /* НАЧАЛО header */
 header {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Play', Arial, sans-serif;
   position: relative;
-  bottom: -79px;
   z-index: 10;
   font-size: 18px;
-  background: rgba(255, 255, 255, 0.8); }
+  background: rgba(50, 80, 82, 0.08); }
+  @media screen and (min-width: 768px) {
+    header {
+      background: rgba(255, 255, 255, 0.8);
+      bottom: -79px; } }
   header .header__logo {
     margin: 0 auto;
     display: flex;
@@ -131,7 +137,7 @@ header {
         display: inline-block;
         text-align: left; }
         header .navbar-and-contacts-col .uk-navbar .uk-navbar-nav > li > a {
-          font-family: 'Comfortaa', cursive;
+          font-family: 'Play', Arial, sans-serif;
           letter-spacing: 1px;
           text-transform: uppercase;
           padding: 0 5px;
