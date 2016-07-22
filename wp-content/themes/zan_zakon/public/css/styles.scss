@@ -24,6 +24,7 @@ body {
   font-size: 16px;
   line-height: 1.2;
   margin-top: -79px;
+  font-family: 'Play', sans-serif;
 }
 
 .success-mail-text{
@@ -46,6 +47,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
+  font-family: 'Play', sans-serif;
 }
 
 h2 {
@@ -96,6 +98,7 @@ h2 {
 
 /* НАЧАЛО header */
 header {
+  font-family: 'Comfortaa', cursive;
   position: relative;
   bottom: -79px;
   z-index: 10;
@@ -136,6 +139,7 @@ header {
 
       a {
         padding: 0 15px;
+        font-family: 'Comfortaa', cursive;
       }
 
       span + span {
@@ -168,6 +172,8 @@ header {
           display: inline-block;
           text-align: left;
           &>a {
+            font-family: 'Comfortaa', cursive;
+            letter-spacing: 1px;
             text-transform: uppercase;
             padding: 0 5px;
             background: transparent;
