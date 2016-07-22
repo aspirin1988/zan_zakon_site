@@ -213,7 +213,7 @@ footer {
   position: relative; }
   .main-section .uk-slidenav-position .uk-overlay-panel .overlay-content {
     color: #00a8c7;
-    font-family: "Bebas Neue", Arial,sans-serif;
+    font-family: 'Comfortaa', cursive;
     text-align: center;
     font-size: 36px;
     padding: 20px;
@@ -229,10 +229,8 @@ footer {
       background: rgba(255, 255, 255, 0.7);
       padding: 10px 10px 5px;
       display: inline-block;
-      margin: 0;
-      font-family: 'Comfortaa', cursive; }
+      margin: 0; }
     .main-section .uk-slidenav-position .uk-overlay-panel .overlay-content p.company_name {
-      font-family: Arial, sans-serif;
       color: #ff001b;
       font-size: 48px;
       text-align: center; }

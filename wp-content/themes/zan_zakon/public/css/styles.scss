@@ -292,7 +292,7 @@ main {
       position: relative;
       .overlay-content {
         color: $main-color-dark;
-        font-family: "Bebas Neue", Arial,sans-serif;
+        font-family: 'Comfortaa', cursive;
         text-align: center;
         font-size: 36px;
         padding: 20px;
@@ -310,10 +310,8 @@ main {
           padding: 10px 10px 5px;
           display: inline-block;
           margin: 0;
-          font-family: 'Comfortaa', cursive;
         }
         p.company_name {
-          font-family: Arial, sans-serif;
           color: $main-color-light;
           font-size: 48px;
           text-align: center;
