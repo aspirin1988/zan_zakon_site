@@ -14,7 +14,8 @@
 body {
   font-size: 16px;
   line-height: 1.2;
-  margin-top: -79px; }
+  margin-top: -79px;
+  font-family: 'Play', sans-serif; }
 
 .success-mail-text {
   color: white; }
@@ -31,7 +32,8 @@ a {
     text-decoration: none; }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.2; }
+  line-height: 1.2;
+  font-family: 'Play', sans-serif; }
 
 h2 {
   font-size: 24px;
@@ -74,6 +76,7 @@ h2 {
 
 /* НАЧАЛО header */
 header {
+  font-family: 'Comfortaa', cursive;
   position: relative;
   bottom: -79px;
   z-index: 10;
@@ -103,7 +106,8 @@ header {
       header .navbar-and-contacts-col .contacts {
         text-align: right; } }
     header .navbar-and-contacts-col .contacts a {
-      padding: 0 15px; }
+      padding: 0 15px;
+      font-family: 'Comfortaa', cursive; }
     header .navbar-and-contacts-col .contacts span + span {
       display: block;
       margin-top: 10px; }
@@ -127,6 +131,8 @@ header {
         display: inline-block;
         text-align: left; }
         header .navbar-and-contacts-col .uk-navbar .uk-navbar-nav > li > a {
+          font-family: 'Comfortaa', cursive;
+          letter-spacing: 1px;
           text-transform: uppercase;
           padding: 0 5px;
           background: transparent;
@@ -221,9 +227,9 @@ footer {
     @media (min-width: 960px) {
       .main-section .uk-slidenav-position .uk-overlay-panel .overlay-content {
         position: absolute;
-        width: 450px;
+        max-width: 600px;
         right: 50%;
-        margin-right: -225px;
+        margin-right: -300px;
         bottom: 350px; } }
     .main-section .uk-slidenav-position .uk-overlay-panel .overlay-content p {
       background: rgba(255, 255, 255, 0.7);
