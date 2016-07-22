@@ -221,7 +221,7 @@ footer {
     color: #00a8c7;
     font-family: 'Comfortaa', cursive;
     text-align: center;
-    font-size: 36px;
+    font-size: 18px;
     padding: 20px;
     background: rgba(255, 255, 255, 0); }
     @media (min-width: 960px) {
@@ -230,7 +230,8 @@ footer {
         max-width: 600px;
         right: 50%;
         margin-right: -300px;
-        bottom: 350px; } }
+        bottom: 350px;
+        font-size: 36px; } }
     .main-section .uk-slidenav-position .uk-overlay-panel .overlay-content p {
       background: rgba(255, 255, 255, 0.7);
       padding: 10px 10px 5px;
@@ -238,8 +239,11 @@ footer {
       margin: 0; }
     .main-section .uk-slidenav-position .uk-overlay-panel .overlay-content p.company_name {
       color: #ff001b;
-      font-size: 48px;
+      font-size: 24px;
       text-align: center; }
+      @media (min-width: 960px) {
+        .main-section .uk-slidenav-position .uk-overlay-panel .overlay-content p.company_name {
+          font-size: 48px; } }
 
 /* КОНЕЦ main-section */
 /* НАЧАЛО about */
@@ -250,7 +254,8 @@ footer {
   text-align: justify; }
   .about img {
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    border-radius: 3px; }
   @media screen and (min-width: 768px) {
     .about {
       text-align: left; } }
@@ -409,8 +414,9 @@ footer {
     @media screen and (min-width: 768px) {
       .publications article.uk-grid {
         margin: 50px 0 30px; } }
-  .publications .text-section {
-    margin: 25px 0; }
+  @media screen and (max-width: 768px) {
+    .publications .text-section {
+      margin: 25px 0; } }
   .publications .more-btn.all {
     float: none;
     margin: 0 auto; }

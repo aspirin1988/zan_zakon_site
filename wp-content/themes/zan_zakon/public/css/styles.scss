@@ -300,7 +300,7 @@ main {
         color: $main-color-dark;
         font-family: 'Comfortaa', cursive;
         text-align: center;
-        font-size: 36px;
+        font-size: 18px;
         padding: 20px;
         background: rgba(255,255,255,.0);
 
@@ -310,6 +310,7 @@ main {
           right: 50%;
           margin-right: -300px;
           bottom: 350px;
+          font-size: 36px;
         }
         p {
           background: rgba(255, 255, 255, 0.7);
@@ -319,8 +320,11 @@ main {
         }
         p.company_name {
           color: $main-color-light;
-          font-size: 48px;
+          font-size: 24px;
           text-align: center;
+          @media (min-width: 960px) {
+            font-size: 48px;
+          }
         }
       }
     }
@@ -338,6 +342,7 @@ main {
   img {
     display: block;
     margin: 0 auto;
+    border-radius: 3px;
   }
   @media screen and (min-width: 768px){
     text-align: left;
@@ -550,7 +555,9 @@ main {
     }
   }
   .text-section {
-    margin: 25px 0;
+    @media screen and (max-width: 768px) {
+      margin: 25px 0;
+    }
   }
   .more-btn.all {
     float: none;
