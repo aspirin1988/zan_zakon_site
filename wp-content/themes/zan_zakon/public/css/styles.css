@@ -107,7 +107,8 @@ header {
       padding-top: 15px; } }
   header .navbar-and-contacts-col .contacts {
     text-align: center;
-    color: #ff001b; }
+    color: #ff001b;
+    margin-bottom: 3px; }
     @media (min-width: 1220px) {
       header .navbar-and-contacts-col .contacts {
         text-align: right; } }
@@ -147,12 +148,12 @@ header {
           color: #00a8c7;
           display: inline-block; }
           header .navbar-and-contacts-col .uk-navbar .uk-navbar-nav > li > a:hover {
-            text-decoration: underline; }
+            background: rgba(0, 122, 234, 0.1); }
       header .navbar-and-contacts-col .uk-navbar .uk-navbar-nav > li + li::before {
         color: #00a8c7;
         content: "|"; }
       header .navbar-and-contacts-col .uk-navbar .uk-navbar-nav > li.uk-active > a {
-        text-decoration: underline; }
+        background: rgba(0, 122, 234, 0.1); }
     header .navbar-and-contacts-col .uk-navbar.uk-active {
       background: white;
       border-bottom: 2px #00a8c7 solid;
@@ -353,18 +354,24 @@ footer {
     margin: 0 auto; }
     .feedback form input,
     .feedback form textarea {
+      font-family: Play, Arial, sans-serif;
       box-sizing: border-box;
       background: transparent;
       border: 1px solid white;
       padding: 7px 15px;
       color: white;
-      width: 100%; }
+      width: 100%;
+      border-radius: 3px; }
     .feedback form input:not([type=submit]) {
       margin-bottom: 20px; }
     .feedback form input[type=submit] {
       padding: 10px 20px;
       float: right;
       width: auto; }
+      .feedback form input[type=submit]:hover {
+        cursor: pointer;
+        background: white;
+        color: black; }
     .feedback form textarea {
       margin-bottom: 20px;
       min-height: 180px;

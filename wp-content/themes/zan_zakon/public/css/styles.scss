@@ -138,6 +138,7 @@ header {
     .contacts {
       text-align: center;
       color: #ff001b;
+      margin-bottom: 3px;
 
       @media (min-width: 1220px) {
         text-align: right;
@@ -188,7 +189,7 @@ header {
             color: #00a8c7;
             display: inline-block;
             &:hover {
-              text-decoration: underline;
+              background: rgba(0, 122, 234, 0.1);
             }
           }
         }
@@ -197,7 +198,7 @@ header {
           content: "|";
         }
         &>li.uk-active > a {
-          text-decoration: underline;
+          background: rgba(0, 122, 234, 0.1);
         }
       }
 
@@ -468,12 +469,14 @@ main {
     margin: 0 auto;
     input,
     textarea {
+      font-family: Play, Arial, sans-serif;
       box-sizing: border-box;
       background: transparent;
       border: 1px solid white;
       padding: 7px 15px;
       color: white;
       width: 100%;
+      border-radius: 3px;
     }
     input:not([type=submit]) {
       margin-bottom: 20px;
@@ -482,6 +485,11 @@ main {
       padding: 10px 20px;
       float: right;
       width: auto;
+      &:hover {
+        cursor: pointer;
+        background: white;
+        color: black;
+      }
     }
     textarea {
       margin-bottom: 20px;
