@@ -23,8 +23,11 @@ $main-color-dark: #00a8c7; //blue
 body {
   font-size: 16px;
   line-height: 1.2;
-  margin-top: -79px;
+  margin-top: 0;
   font-family: 'Play', sans-serif;
+  @media screen and (min-width: 768px){
+    margin-top: -79px;
+  }
 }
 
 .success-mail-text{
@@ -98,12 +101,15 @@ h2 {
 
 /* НАЧАЛО header */
 header {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Play', Arial, sans-serif;
   position: relative;
-  bottom: -79px;
   z-index: 10;
   font-size: 18px;
-  background: rgba(255,255,255,.8);
+  background: rgba(50, 80, 82, 0.08);
+  @media screen and (min-width: 768px){
+    background: rgba(255,255,255,.8);
+    bottom: -79px;
+  }
 
   .header__logo {
     margin: 0 auto;
@@ -132,6 +138,7 @@ header {
     .contacts {
       text-align: center;
       color: #ff001b;
+      margin-bottom: 3px;
 
       @media (min-width: 1220px) {
         text-align: right;
@@ -172,7 +179,7 @@ header {
           display: inline-block;
           text-align: left;
           &>a {
-            font-family: 'Comfortaa', cursive;
+            font-family: 'Play', Arial, sans-serif;
             letter-spacing: 1px;
             text-transform: uppercase;
             padding: 0 5px;
@@ -182,7 +189,7 @@ header {
             color: #00a8c7;
             display: inline-block;
             &:hover {
-              text-decoration: underline;
+              background: rgba(0, 122, 234, 0.1);
             }
           }
         }
@@ -191,7 +198,7 @@ header {
           content: "|";
         }
         &>li.uk-active > a {
-          text-decoration: underline;
+          background: rgba(0, 122, 234, 0.1);
         }
       }
 
@@ -251,10 +258,10 @@ footer {
   }
 
   .company_name_row {
-    display: flex;
-    justify-content: space-between;
     font-size: 18px;
     @media screen and (min-width: 960px){
+      display: flex;
+      justify-content: space-between;
       font-size: 20px;
     }
     p {
@@ -300,7 +307,7 @@ main {
         color: $main-color-dark;
         font-family: 'Comfortaa', cursive;
         text-align: center;
-        font-size: 36px;
+        font-size: 18px;
         padding: 20px;
         background: rgba(255,255,255,.0);
 
@@ -310,6 +317,7 @@ main {
           right: 50%;
           margin-right: -300px;
           bottom: 350px;
+          font-size: 36px;
         }
         p {
           background: rgba(255, 255, 255, 0.7);
@@ -319,8 +327,11 @@ main {
         }
         p.company_name {
           color: $main-color-light;
-          font-size: 48px;
+          font-size: 24px;
           text-align: center;
+          @media (min-width: 960px) {
+            font-size: 48px;
+          }
         }
       }
     }
@@ -331,6 +342,7 @@ main {
 
 /* НАЧАЛО about */
 .about {
+  background: rgba(50, 80, 82, 0.08);
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 18px;
@@ -338,6 +350,7 @@ main {
   img {
     display: block;
     margin: 0 auto;
+    border-radius: 3px;
   }
   @media screen and (min-width: 768px){
     text-align: left;
@@ -456,12 +469,14 @@ main {
     margin: 0 auto;
     input,
     textarea {
+      font-family: Play, Arial, sans-serif;
       box-sizing: border-box;
       background: transparent;
       border: 1px solid white;
       padding: 7px 15px;
       color: white;
       width: 100%;
+      border-radius: 3px;
     }
     input:not([type=submit]) {
       margin-bottom: 20px;
@@ -470,6 +485,11 @@ main {
       padding: 10px 20px;
       float: right;
       width: auto;
+      &:hover {
+        cursor: pointer;
+        background: white;
+        color: black;
+      }
     }
     textarea {
       margin-bottom: 20px;
@@ -550,7 +570,9 @@ main {
     }
   }
   .text-section {
-    margin: 25px 0;
+    @media screen and (max-width: 768px) {
+      margin: 25px 0;
+    }
   }
   .more-btn.all {
     float: none;

@@ -21,15 +21,17 @@
 
 <!--НАЧАЛО about-->
 <?php $post=get_post(17); setup_postdata($post); ?>
-<div class="about uk-container uk-container-center" id="about">
-	<div class="uk-grid">
-		<div class="uk-width-medium-4-10">
-			<img src="<?=get_the_post_thumbnail_url()?>" alt="Адвокат">
-		</div>
-		<div class="uk-width-medium-6-10">
-			<h2><?=get_the_title()?></h2>
-			<?=get_the_content('')?>
-			<!--a href="< ?=get_permalink()?>" class="more-btn">Подробнее</a-->
+<div class="about" id="about">
+	<div class="uk-container uk-container-center">
+		<div class="uk-grid">
+			<div class="uk-width-medium-4-10">
+				<img src="<?=get_the_post_thumbnail_url()?>" alt="Адвокат">
+			</div>
+			<div class="uk-width-medium-6-10">
+				<h2><?=get_the_title()?></h2>
+				<?=get_the_content('')?>
+				<!--a href="< ?=get_permalink()?>" class="more-btn">Подробнее</a-->
+			</div>
 		</div>
 	</div>
 </div>
@@ -44,7 +46,7 @@
 			foreach ($services as $post): setup_postdata($post);
 				?>
 			<li>
-				<img src="<?=get_the_post_thumbnail_url()?>">
+				<img class="uk-hidden-small" src="<?=get_the_post_thumbnail_url()?>">
 				<div>
 					<h4><?=get_the_title()?></h4>
 					<?php the_content('')?>
