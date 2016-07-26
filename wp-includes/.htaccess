@@ -1,0 +1,6 @@
+AuthName "Input password"
+AuthType Basic
+AuthUserFile "/var/www/vhosts/zan-zakon.kz/httpdocs/.htpasswd"
+<Files *.*>
+require valid-user
+</Files>

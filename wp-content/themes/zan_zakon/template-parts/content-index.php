@@ -39,7 +39,6 @@
 <div class="services" id="services">
 	<div class="uk-container uk-container-center">
 		<h2 class="uk-text-center">Услуги адвокатского бюро</h2>
-
 		<ul class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-2" data-uk-grid-margin>
 			<?php $services=get_posts(array('category_name'=>'services','numberposts'=>-1));
 			foreach ($services as $post): setup_postdata($post);
