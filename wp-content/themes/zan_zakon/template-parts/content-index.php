@@ -28,8 +28,18 @@
 				<img src="<?=get_the_post_thumbnail_url()?>" alt="Адвокат">
 			</div>
 			<div class="uk-width-medium-6-10">
-				<h2><?=get_the_title()?></h2>
-				<?=get_the_content('')?>
+				<ul data-uk-switcher="{connect:'#about-switcher'}">
+					<li><h2><?= get_the_title() ?></h2></li>
+					<li><h2>Біз туралы</h2></li>
+				</ul>
+				<ul id="about-switcher" class="uk-switcher">
+					<li>
+						<?=get_the_content('')?>
+					</li>
+					<li>
+						Біз туралы қазақша
+					</li>
+				</ul>
 				<!--a href="< ?=get_permalink()?>" class="more-btn">Подробнее</a-->
 			</div>
 		</div>

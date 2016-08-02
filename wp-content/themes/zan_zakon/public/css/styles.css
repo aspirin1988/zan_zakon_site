@@ -267,12 +267,22 @@ footer {
   @media screen and (min-width: 768px) {
     .about {
       text-align: left; } }
+  .about [data-uk-switcher] {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+    justify-content: space-around; }
+    .about [data-uk-switcher] li {
+      flex: 1;
+      cursor: pointer; }
+    .about [data-uk-switcher] li[aria-expanded=true] {
+      background: rgba(0, 0, 0, 0.1); }
   .about h2 {
     font-weight: bold;
-    margin-top: 25px; }
-    @media screen and (min-width: 768px) {
-      .about h2 {
-        margin-top: 0; } }
+    padding: 10px 0;
+    text-align: center;
+    margin: 0; }
 
 /* КОНЕЦ about */
 /* НАЧАЛО services */
