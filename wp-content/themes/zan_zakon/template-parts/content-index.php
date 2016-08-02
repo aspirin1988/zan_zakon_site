@@ -183,11 +183,16 @@
 					<li>
 						<h3><?=get_the_title()?></h3>
 						<p>
-							<?php the_content('')?>
-							<a href="#review-id" data-uk-modal>Подробнее..</a>
+							<?php
+
+                                $content = get_the_content('');
+
+                                echo mb_substr($content,0,200).'...';
+                            ?>
+
 						</p>
 
-
+                        <a href="#review-id-<?php the_ID()?>" data-uk-modal>Подробнее..</a>
 
 					</li>
 					<?php endforeach; ?>
@@ -243,10 +248,22 @@
 </div>
 <!--КОНЕЦ publications-->
 
+
+<?php $reviews=get_posts(array('category_name'=>'reviews','numberposts'=>-1));
+foreach ($reviews as $post): setup_postdata($post);
+    ?>
+        <div id="review-id-<?php the_ID()?>" class="uk-modal">
+            <div class="uk-modal-dialog">
+                <a class="uk-modal-close uk-close"></a>
+                <div class="uk-modal-header"><?=get_the_title()?></div>
+                <div class="img-modal uk-flex uk-flex-center">
+                    <img src="<?php the_post_thumbnail_url()?>" alt="">
+                </div>
+                <?php the_content('')?>
+            </div>
+        </div>
+
+<?php endforeach; ?>
+
 <!-- This is the modal for reviews -->
-<div id="review-id" class="uk-modal">
-	<div class="uk-modal-dialog">
-		<a class="uk-modal-close uk-close"></a>
-		...
-	</div>
-</div>
+
