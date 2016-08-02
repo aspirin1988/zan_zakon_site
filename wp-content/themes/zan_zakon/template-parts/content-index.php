@@ -37,7 +37,7 @@
 						<?=get_the_content('')?>
 					</li>
 					<li>
-						Біз туралы қазақша
+						<?=get_field('kaz',4)?>
 					</li>
 				</ul>
 				<!--a href="< ?=get_permalink()?>" class="more-btn">Подробнее</a-->
@@ -52,7 +52,7 @@
 	<div class="uk-container uk-container-center">
 		<h2 class="uk-text-center">Услуги адвокатского бюро</h2>
 		<ul class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-2" data-uk-grid-margin>
-			<?php $services=get_posts(array('category_name'=>'services','numberposts'=>-1));
+			<?php $services=get_posts(array('category_name'=>'services','numberposts'=>-1,'orderby'=> 'post_date','order'           => 'ASC'));
 			foreach ($services as $post): setup_postdata($post);
 				?>
 			<li>
@@ -69,76 +69,76 @@
 <!--КОНЕЦ advantages-->
 
 <!--НАЧАЛО partners-->
-<div class="partners" id="partners">
-	<div class="uk-container uk-container-center">
-		<h2 class="uk-text-center">Партнёры</h2>
-		<div class="uk-grid">
-			<div class="uk-width-medium-3-10 nav-container">
-				<ul class="uk-nav uk-nav-side" data-uk-switcher="{connect:'#partner-contents'}">
-					<?php $reviews=get_posts(array('category_name'=>'partners','numberposts'=>-1, 'order'=>'ASC'));
-					foreach ($reviews as $key=>$post): setup_postdata($post);
-					?>
-					<li class="<?php if (!$key) echo 'uk-active';?>"><a href=""><?=get_the_title()?></a></li>
-					<?php endforeach; wp_reset_query(); ?>
-				</ul>
-			</div>
-			<div class="uk-width-medium-7-10 content-container">
-				<ul id="partner-contents" class="uk-switcher">
-					<?php
-					foreach ($reviews as $post): setup_postdata($post);
-					?>
-					<li>
-						<div class="uk-grid">
-						<div class="uk-grid uk-width-medium-1-1">
-							<div class="uk-width-medium-2-10 profile-container">
-								<img src="<?=get_the_post_thumbnail_url()?>">
-							</div>
-							<div class="uk-width-medium-8-10 text-container">
-								<h3><?=get_the_title()?></h3>
-								<?php the_content('')?>
-							</div>
-						</div>
-						<div class="uk-grid uk-width-medium-1-1 contacts_and_map">
-							<div class="uk-width-medium-3-10 text-container uk-text-center">
-								<?php if (get_field('phone1')): ?>
-								<a href="tel:<?=get_field('phone1')?>"><?=get_field('phone1')?></a> <br>
-								<?php endif; ?>
-								<?php if (get_field('phone2')): ?>
-									<a href="tel:<?=get_field('phone2')?>"><?=get_field('phone2')?></a> <br>
-								<?php endif; ?>
-								<?php if (get_field('phone3')): ?>
-									<a href="tel:<?=get_field('phone3')?>"><?=get_field('phone3')?></a> <br>
-								<?php endif; ?>
-								<?php if (get_field('email')): ?>
-									<a href="tel:<?=get_field('email')?>"><?=get_field('email')?></a> <br>
-								<?php endif; ?>
-								<p>
-									<?php if (get_field('address1')): ?>
-										<?=get_field('address1')?><br>
-									<?php endif; ?>
-									<?php if (get_field('address2')): ?>
-										<?=get_field('address2')?><br>
-									<?php endif; ?>
-									<?php if (get_field('address3')): ?>
-										<?=get_field('address3')?><br>
-									<?php endif; ?>
-								</p>
-							</div>
-							<div class="uk-width-small-1-1 uk-width-medium-7-10 partners-map">
-								<?=get_field('map')?>
-							</div>
-						</div>
-						</div>
-					</li>
-					<?php endforeach; ?>
-				</ul>
-			</div>
-		</div>
-
-
-	</div>
-</div>
-<!--КОНЕЦ partners-->
+<!--<div class="partners" id="partners">-->
+<!--	<div class="uk-container uk-container-center">-->
+<!--		<h2 class="uk-text-center">Партнёры</h2>-->
+<!--		<div class="uk-grid">-->
+<!--			<div class="uk-width-medium-3-10 nav-container">-->
+<!--				<ul class="uk-nav uk-nav-side" data-uk-switcher="{connect:'#partner-contents'}">-->
+<!--					--><?php //$reviews=get_posts(array('category_name'=>'partners','numberposts'=>-1, 'order'=>'ASC'));
+//					foreach ($reviews as $key=>$post): setup_postdata($post);
+//					?>
+<!--					<li class="--><?php //if (!$key) echo 'uk-active';?><!--"><a href="">--><?//=get_the_title()?><!--</a></li>-->
+<!--					--><?php //endforeach; wp_reset_query(); ?>
+<!--				</ul>-->
+<!--			</div>-->
+<!--			<div class="uk-width-medium-7-10 content-container">-->
+<!--				<ul id="partner-contents" class="uk-switcher">-->
+<!--					--><?php
+//					foreach ($reviews as $post): setup_postdata($post);
+//					?>
+<!--					<li>-->
+<!--						<div class="uk-grid">-->
+<!--						<div class="uk-grid uk-width-medium-1-1">-->
+<!--							<div class="uk-width-medium-2-10 profile-container">-->
+<!--								<img src="--><?//=get_the_post_thumbnail_url()?><!--">-->
+<!--							</div>-->
+<!--							<div class="uk-width-medium-8-10 text-container">-->
+<!--								<h3>--><?//=get_the_title()?><!--</h3>-->
+<!--								--><?php //the_content('')?>
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="uk-grid uk-width-medium-1-1 contacts_and_map">-->
+<!--							<div class="uk-width-medium-3-10 text-container uk-text-center">-->
+<!--								--><?php //if (get_field('phone1')): ?>
+<!--								<a href="tel:--><?//=get_field('phone1')?><!--">--><?//=get_field('phone1')?><!--</a> <br>-->
+<!--								--><?php //endif; ?>
+<!--								--><?php //if (get_field('phone2')): ?>
+<!--									<a href="tel:--><?//=get_field('phone2')?><!--">--><?//=get_field('phone2')?><!--</a> <br>-->
+<!--								--><?php //endif; ?>
+<!--								--><?php //if (get_field('phone3')): ?>
+<!--									<a href="tel:--><?//=get_field('phone3')?><!--">--><?//=get_field('phone3')?><!--</a> <br>-->
+<!--								--><?php //endif; ?>
+<!--								--><?php //if (get_field('email')): ?>
+<!--									<a href="tel:--><?//=get_field('email')?><!--">--><?//=get_field('email')?><!--</a> <br>-->
+<!--								--><?php //endif; ?>
+<!--								<p>-->
+<!--									--><?php //if (get_field('address1')): ?>
+<!--										--><?//=get_field('address1')?><!--<br>-->
+<!--									--><?php //endif; ?>
+<!--									--><?php //if (get_field('address2')): ?>
+<!--										--><?//=get_field('address2')?><!--<br>-->
+<!--									--><?php //endif; ?>
+<!--									--><?php //if (get_field('address3')): ?>
+<!--										--><?//=get_field('address3')?><!--<br>-->
+<!--									--><?php //endif; ?>
+<!--								</p>-->
+<!--							</div>-->
+<!--							<div class="uk-width-small-1-1 uk-width-medium-7-10 partners-map">-->
+<!--								--><?//=get_field('map')?>
+<!--							</div>-->
+<!--						</div>-->
+<!--						</div>-->
+<!--					</li>-->
+<!--					--><?php //endforeach; ?>
+<!--				</ul>-->
+<!--			</div>-->
+<!--		</div>-->
+<!---->
+<!---->
+<!--	</div>-->
+<!--</div>-->
+<!--<!--КОНЕЦ partners-->
 
 <!--НАЧАЛО feedback-->
 <div class="feedback" id="feedback">
