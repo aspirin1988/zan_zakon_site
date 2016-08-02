@@ -184,7 +184,11 @@
 						<h3><?=get_the_title()?></h3>
 						<p>
 							<?php the_content('')?>
+							<a href="#review-id" data-uk-modal>Подробнее..</a>
 						</p>
+
+
+
 					</li>
 					<?php endforeach; ?>
 				</ul>
@@ -238,3 +242,11 @@
 	</div>
 </div>
 <!--КОНЕЦ publications-->
+
+<!-- This is the modal for reviews -->
+<div id="review-id" class="uk-modal">
+	<div class="uk-modal-dialog">
+		<a class="uk-modal-close uk-close"></a>
+		...
+	</div>
+</div>
