@@ -282,7 +282,11 @@ footer {
     font-weight: bold;
     padding: 10px 0;
     text-align: center;
-    margin: 0; }
+    margin: 0;
+    font-size: 20px; }
+    @media screen and (min-width: 768px) {
+      .about h2 {
+        font-size: 28px; } }
 
 /* КОНЕЦ about */
 /* НАЧАЛО services */
