@@ -22,7 +22,7 @@ get_header(); ?>
 		<main>
 			<div class="publications" id="publications">
 				<div class="uk-container uk-container-center">
-					<h2>Публикации бюро</h2>
+					<h2><?=$obj->name?></h2>
 					<?php
 					query_posts(array('category_name'=>$obj->slug,'posts_per_page'=>$page_post,'offset'=>$offset));
 					if ( have_posts() ) : ?>

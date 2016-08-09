@@ -212,7 +212,8 @@
 <!--НАЧАЛО publications-->
 <div class="publications" id="publications">
 	<div class="uk-container uk-container-center">
-		<h2>Публикации бюро</h2>
+		<?php $cat=get_category(6) ?>
+		<h2><?=$cat->name?></h2>
 		<?php $reviews=get_posts(array('category_name'=>'publications','numberposts'=>2));
 		foreach ($reviews as $key=> $post): setup_postdata($post);
 		?>
