@@ -12,9 +12,6 @@
 				<a href="tel:<?=get_field('phone3',4)?>"><?=get_field('phone3',4)?></a> <br>
 				<a href="mailto:<?=get_field('email',4)?>"><?=get_field('email',4)?></a>
 			</p>
-			<div class="company_name_row">
-				<?=get_field('slogan',4)?>
-			</div>
 			<img src="<?=get_field('logo',4)?>" alt="Лого">
 		</div>
 		<div class="uk-width-medium-1-2 uk-pull-1-2">

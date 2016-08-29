@@ -18,7 +18,7 @@ body {
   font-family: 'Play', sans-serif; }
   @media screen and (min-width: 768px) {
     body {
-      margin-top: -79px; } }
+      margin-top: -119px; } }
 
 .success-mail-text {
   color: white; }
@@ -87,15 +87,15 @@ header {
   @media screen and (min-width: 768px) {
     header {
       background: rgba(255, 255, 255, 0.8);
-      bottom: -79px; } }
+      bottom: -119px; } }
   header .header__logo {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    padding: 15px 0; }
+    padding: 10px 0; }
     @media (min-width: 480px) {
       header .header__logo {
-        max-width: 330px; } }
+        max-width: 220px; } }
     @media (min-width: 1220px) {
       header .header__logo {
         float: left; } }
@@ -108,7 +108,7 @@ header {
   header .navbar-and-contacts-col .contacts {
     text-align: center;
     color: #ff001b;
-    margin-bottom: 3px; }
+    margin-bottom: 25px; }
     @media (min-width: 1220px) {
       header .navbar-and-contacts-col .contacts {
         text-align: right; } }
@@ -237,13 +237,13 @@ footer {
         max-width: 600px;
         right: 50%;
         margin-right: -300px;
-        bottom: 350px;
+        bottom: 300px;
         font-size: 36px; } }
     .main-section .uk-slidenav-position .uk-overlay-panel .overlay-content p {
       background: rgba(255, 255, 255, 0.7);
       padding: 10px 10px 5px;
       display: inline-block;
-      margin: 0; }
+      margin: 0 0 10px 0; }
     .main-section .uk-slidenav-position .uk-overlay-panel .overlay-content p.company_name {
       color: #ff001b;
       font-size: 24px;
