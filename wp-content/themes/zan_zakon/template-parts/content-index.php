@@ -187,12 +187,12 @@
 
                                 $content = get_the_content('');
 
-                                echo mb_substr($content,0,200).'...';
+                                echo mb_substr($content,0,200);
                             ?>
 
 						</p>
 
-                        <a href="#review-id-<?php the_ID()?>" data-uk-modal>Подробнее..</a>
+                        <a href="#review-id-<?php the_ID()?>" data-uk-modal>Подробнее...</a>
 
 					</li>
 					<?php endforeach; ?>
@@ -227,10 +227,11 @@
 
 				<!--НАЧАЛО Unitegallery-->
 				<div id="unitegallery-<?=$key+1?>" style="display:none;">
-
+					<?php if (get_the_post_thumbnail_url()):?>
 					<img alt="Image" src="<?=get_the_post_thumbnail_url()?>"
 						 data-image="<?=get_the_post_thumbnail_url()?>"
 						 data-description="Фото">
+					<?php endif; ?>
 					<?php foreach (pp_gallery_get()as  $image): ?>
 					<img alt="<?=$image->alt?>" src="<?=$image->url?>"
 						 data-image="<?=$image->url?>"

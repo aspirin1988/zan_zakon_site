@@ -8,10 +8,11 @@
 
 		<!--НАЧАЛО Unitegallery-->
 		<div id="unitegallery-<?=get_the_ID()?>" class="gallery" style="display:none;">
-
+			<?php if (get_the_post_thumbnail_url()):?>
 			<img alt="Image" src="<?=get_the_post_thumbnail_url()?>"
 				 data-image="<?=get_the_post_thumbnail_url()?>"
 				 data-description="Фото">
+			<?php endif; ?>
 			<?php foreach (pp_gallery_get() as $image): ?>
 			<img alt="Image" src="<?=$image->url?>"
 				 data-image="<?=$image->url?>"
