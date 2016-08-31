@@ -244,7 +244,7 @@
 		</article>
 		<?php endforeach; wp_reset_query(); ?>
 		<div class="uk-text-center">
-			<a href="/publications/" class="more-btn all">Все публикации</a>
+			<a href="<?=get_term_link(6)?>" class="more-btn all">Все события</a>
 		</div>
 	</div>
 </div>
